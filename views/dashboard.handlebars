@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<h1>Dashboard</h1>
+
+
+{{#each data}}
+    <div class="card">
+        <span>{{name}}</span>
+        <span>{{nf}}</span>
+        <span>{{total_itens}}</span>
+        <span>{{total_nf}}</span>
+        <span>{{pathFile}}</span>
+        <a href="/print/?file={{pathFile}}">==== aqui ====</a>
+    </div>
+    <hr>
+{{/each}}
+    

@@ -1,4 +1,4 @@
-const { readFile, writeFile, readdirSync } = require("fs")
+const { readFile, readFileSync, writeFile, readdirSync } = require("fs")
 const { resolve, extname } = require("path")
 
 const OPTIONS = {
@@ -31,7 +31,7 @@ module.exports = class File {
     }
 
     static async filterByXML(dir, cb) {
-        const data = await readdirSync(dir, { encoding: "utf-8" })
+        const data = readdirSync(dir, { encoding: "utf-8" })
         cb(data.filter(el => extname(el) === '.xml'))
     }
 }
